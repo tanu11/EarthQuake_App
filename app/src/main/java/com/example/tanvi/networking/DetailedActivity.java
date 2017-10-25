@@ -10,9 +10,11 @@ public class DetailedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed);
+        Bundle bundle = getIntent().getExtras();
+        String url = bundle.getString("message");
         WebView webView= (WebView) findViewById(R.id.webview);
 
-        webView.loadUrl("http://google.com");
+        webView.loadUrl(url);
 
 
     }

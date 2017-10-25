@@ -39,8 +39,9 @@ public class MainActivity extends AppCompatActivity implements FetchData.FetchDa
                 Toast.makeText(getApplicationContext(),  adapter.getItem(position).getLocation(),Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent();
-//                i.setClass(getApplicationContext(), M.class);
-//                startActivity(i);
+                i.setClass(getApplicationContext(), DetailedActivity.class);
+                i.putExtra("message",earthquakeList.get(position).getUrl());
+                startActivity(i);
             }
         });
 
